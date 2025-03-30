@@ -4,10 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Codewars leaderboard</title>
+  <script src="index.mjs" type="module"></script>
+  <style>
+    table {
+      display: none;
+    }
+
+    tbody tr:first-of-type {
+      background: linear-gradient(to bottom right, green, yellow, blue);
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-  
-</body>
+  <main>
+    <div id="input-fields">
+      <label for="input-el">Input users seperated by a comma</label>
+      <input type="text" id="input-el" placeholder="Enter usernames" required>
+      <label for="select-language">Select a language</label>
+      <select name="select-users" id="select-language">
+        <option value="" disabled selected>Select a language</option>
 
-<script src="index.mjs" type="module"></script>
+      </select>
+      <button id="submit-btn">submit</button>
+    </div>
+    <section id="user-rank">
+      <table border="1" id="table-details">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Clan</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody id="scoreTable">
+
+        </tbody>
+      </table>
+    </section>
+    <section id="message"></section>
+  </main>
+</body>
 </html>
